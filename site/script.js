@@ -1,7 +1,7 @@
 const canvas = document.querySelector("#hero-canvas");
 const ctx = canvas?.getContext("2d");
 const revealTargets = document.querySelectorAll(
-  ".intro > *, .facts article, .section-heading, .program-grid article, .check-list p, .timeline li, .apply > *"
+  ".intro > *, .facts article, .section-heading, .program-grid article, .speaker-card, .access > *"
 );
 
 let points = [];
