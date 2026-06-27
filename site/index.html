@@ -3,154 +3,173 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Private Stay | My Homepage</title>
+    <title>生成AI講習 | 2026年6月27日開催</title>
     <meta
       name="description"
-      content="Airbnbで予約できる宿泊施設の魅力を5言語で紹介するホームページです。"
+      content="2026年6月27日開催の生成AI講習紹介ページ。ChatGPTなどの生成AIを日常業務や学習に活用するための基礎、実践、注意点をわかりやすく学べます。"
     >
     <link rel="stylesheet" href="./styles.css">
   </head>
-  <body>
+  <body id="top">
     <header class="site-header">
-      <a class="brand" href="./" data-i18n="brand">Private Stay</a>
-      <nav aria-label="Main navigation">
-        <a href="#stay" data-i18n="navStay">Stay</a>
-        <a href="#features" data-i18n="navFeatures">Highlights</a>
-        <a href="#access" data-i18n="navAccess">Access</a>
-        <a href="#faq" data-i18n="navFaq">FAQ</a>
+      <a class="brand" href="./" aria-label="生成AI講習トップ">
+        <span>AI</span>講習
+      </a>
+      <nav aria-label="ページ内メニュー">
+        <a href="#about">概要</a>
+        <a href="#program">内容</a>
+        <a href="#audience">対象</a>
+        <a href="#apply">申込</a>
       </nav>
-      <div class="language-switcher" aria-label="Language selector">
-        <button class="lang-button is-active" type="button" data-lang="ja">日本語</button>
-        <button class="lang-button" type="button" data-lang="en">EN</button>
-        <button class="lang-button" type="button" data-lang="ko">한국어</button>
-        <button class="lang-button" type="button" data-lang="zhHans">简体</button>
-        <button class="lang-button" type="button" data-lang="zhHant">繁體</button>
-      </div>
     </header>
 
     <main>
       <section class="hero">
-        <div class="hero-media" aria-label="Stay photo collage">
-          <img
-            src="./assets/stay-hero.jpeg"
-            alt="Airbnb listing photo"
-          >
-          <div class="hero-card">
-            <span data-i18n="badge">Airbnb booking available</span>
-            <strong data-i18n="score">A calm private stay for your next trip</strong>
-          </div>
-        </div>
-        <div class="hero-copy">
-          <p class="eyebrow" data-i18n="eyebrow">PRIVATE VACATION STAY</p>
-          <h1 data-i18n="heroTitle">旅の時間を、もっと心地よく。</h1>
-          <p data-i18n="heroText">
-            明るい空間、落ち着いたインテリア、滞在しやすい設備。観光にも、家族旅行にも、ゆっくり過ごす週末にも選びたくなる一棟です。
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+        <div class="hero-shade"></div>
+        <div class="hero-inner">
+          <p class="eyebrow">2026年6月27日 開催</p>
+          <h1>生成AIを、明日から使える力に。</h1>
+          <p class="lead">
+            ChatGPTをはじめとした生成AIの基本から、文章作成、情報整理、企画づくり、業務効率化まで。
+            はじめての方にもわかりやすい実践型の講習です。
           </p>
           <div class="hero-actions">
-            <a class="button primary" data-i18n="bookNow" href="https://www.airbnb.jp/rooms/1376670888016159485?check_in=2026-06-26&check_out=2026-06-28&photo_id=2332524821&source_impression_id=p3_1779180334_P3j97izze5oZvz-U&previous_page_section_name=1000" target="_blank" rel="noreferrer">Airbnbで予約する</a>
-            <a class="button secondary" data-i18n="seePhotos" href="https://www.airbnb.jp/rooms/1376670888016159485?check_in=2026-06-26&check_out=2026-06-28&photo_id=2332524821&source_impression_id=p3_1779180334_P3j97izze5oZvz-U&previous_page_section_name=1000&modal=PHOTO_TOUR_SCROLLABLE" target="_blank" rel="noreferrer">写真を見る</a>
+            <a class="button primary" href="#apply">参加方法を見る</a>
+            <a class="button ghost" href="#program">講習内容を見る</a>
           </div>
-          <dl class="quick-facts">
-            <div>
-              <dt data-i18n="fact1Label">Best for</dt>
-              <dd data-i18n="fact1">Couples, families, friends</dd>
-            </div>
-            <div>
-              <dt data-i18n="fact2Label">Mood</dt>
-              <dd data-i18n="fact2">Quiet, clean, relaxing</dd>
-            </div>
-            <div>
-              <dt data-i18n="fact3Label">Book</dt>
-              <dd data-i18n="fact3">Through Airbnb</dd>
-            </div>
-          </dl>
         </div>
       </section>
 
-      <section id="stay" class="section intro">
-        <div class="section-header">
-          <p class="eyebrow" data-i18n="introEyebrow">WHY STAY HERE</p>
-          <h2 data-i18n="introTitle">到着した瞬間から、くつろげる滞在へ。</h2>
-        </div>
-        <p data-i18n="introText">
-          旅先でも自分の部屋のように過ごせる、やさしい雰囲気のステイ。朝はゆっくり支度して、昼は街を楽しみ、夜は落ち着いた空間でリセットできます。
-        </p>
-      </section>
-
-      <section id="features" class="section features">
-        <div class="section-header">
-          <p class="eyebrow" data-i18n="featuresEyebrow">HIGHLIGHTS</p>
-          <h2 data-i18n="featuresTitle">予約前に知りたい魅力</h2>
-        </div>
-        <div class="feature-grid">
-          <article>
-            <span class="icon">01</span>
-            <h3 data-i18n="feature1Title">写真で伝わる心地よさ</h3>
-            <p data-i18n="feature1Text">明るく清潔感のある空間で、短期滞在でも長めの休暇でも過ごしやすい雰囲気です。</p>
-          </article>
-          <article>
-            <span class="icon">02</span>
-            <h3 data-i18n="feature2Title">旅の予定を組みやすい</h3>
-            <p data-i18n="feature2Text">Airbnb上で空室確認、料金確認、予約まで進められるので、旅行計画がスムーズです。</p>
-          </article>
-          <article>
-            <span class="icon">03</span>
-            <h3 data-i18n="feature3Title">多言語で案内</h3>
-            <p data-i18n="feature3Text">日本語、英語、韓国語、中国語で概要を確認でき、海外ゲストにも伝わりやすいページです。</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section gallery-section">
-        <div class="section-header">
-          <p class="eyebrow" data-i18n="galleryEyebrow">ATMOSPHERE</p>
-          <h2 data-i18n="galleryTitle">滞在を想像できる空間</h2>
-        </div>
-        <div class="gallery">
-          <img src="./assets/stay-room-1.jpeg" alt="Airbnb listing photo">
-          <img src="./assets/stay-room-2.jpeg" alt="Airbnb listing photo">
-          <img src="./assets/stay-room-3.jpeg" alt="Airbnb listing photo">
-        </div>
-      </section>
-
-      <section id="access" class="section split">
+      <section id="about" class="section intro">
         <div>
-          <p class="eyebrow" data-i18n="accessEyebrow">BOOKING</p>
-          <h2 data-i18n="accessTitle">予約はAirbnbで安全に。</h2>
+          <p class="eyebrow">Overview</p>
+          <h2>生成AIを怖がらず、便利な道具として使いこなす。</h2>
         </div>
-        <div>
-          <p data-i18n="accessText">
-            空室状況、料金、ハウスルール、キャンセル条件、最新の写真はAirbnbページで確認できます。気になる日程がある場合は、早めの確認がおすすめです。
+        <div class="intro-copy">
+          <p>
+            この講習では、生成AIの仕組みを難しい専門用語に頼らず整理しながら、
+            実際にどんな場面で役立つのかを体験ベースで学びます。
           </p>
-          <a class="text-link" data-i18n="accessLink" href="https://www.airbnb.jp/rooms/1376670888016159485?check_in=2026-06-26&check_out=2026-06-28&photo_id=2332524821&source_impression_id=p3_1779180334_P3j97izze5oZvz-U&previous_page_section_name=1000" target="_blank" rel="noreferrer">予約ページを開く</a>
+          <p>
+            正しい質問の作り方、出力結果の確認方法、個人情報や著作権への注意点まで、
+            安心して使うための基礎をまとめて身につけます。
+          </p>
         </div>
       </section>
 
-      <section id="faq" class="section faq">
-        <div class="section-header">
-          <p class="eyebrow" data-i18n="faqEyebrow">FAQ</p>
-          <h2 data-i18n="faqTitle">よくある確認ポイント</h2>
+      <section class="facts" aria-label="開催情報">
+        <article>
+          <span>日程</span>
+          <strong>2026.06.27</strong>
+          <small>土曜日開催</small>
+        </article>
+        <article>
+          <span>形式</span>
+          <strong>実践講習</strong>
+          <small>説明とワークを組み合わせます</small>
+        </article>
+        <article>
+          <span>レベル</span>
+          <strong>入門</strong>
+          <small>初めての方も歓迎</small>
+        </article>
+        <article>
+          <span>持ち物</span>
+          <strong>PC推奨</strong>
+          <small>スマートフォンでも参加可能</small>
+        </article>
+      </section>
+
+      <section id="program" class="section program">
+        <div class="section-heading">
+          <p class="eyebrow">Program</p>
+          <h2>講習内容</h2>
         </div>
-        <div class="faq-list">
+        <div class="program-grid">
           <article>
-            <h3 data-i18n="faq1Q">料金や空室はどこで確認できますか？</h3>
-            <p data-i18n="faq1A">Airbnbの予約ページで、日付を選ぶと最新の料金と空室状況を確認できます。</p>
+            <span>01</span>
+            <h3>生成AIの基本</h3>
+            <p>何ができるのか、どこが得意でどこに注意が必要なのかを整理します。</p>
           </article>
           <article>
-            <h3 data-i18n="faq2Q">写真をもっと見られますか？</h3>
-            <p data-i18n="faq2A">写真ツアーへのリンクから、Airbnb上の最新写真を確認できます。</p>
+            <span>02</span>
+            <h3>プロンプト実践</h3>
+            <p>よい回答を引き出す質問文の作り方を、例題を使って練習します。</p>
           </article>
           <article>
-            <h3 data-i18n="faq3Q">問い合わせはどこからできますか？</h3>
-            <p data-i18n="faq3A">予約前の質問はAirbnbページからホストへ送るのが安心です。</p>
+            <span>03</span>
+            <h3>仕事と学習への活用</h3>
+            <p>文章作成、要約、アイデア出し、資料構成などの使いどころを体験します。</p>
           </article>
+          <article>
+            <span>04</span>
+            <h3>安全な使い方</h3>
+            <p>個人情報、事実確認、著作権、社内ルールなどの基本ポイントを確認します。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="audience" class="section audience">
+        <div class="section-heading">
+          <p class="eyebrow">For You</p>
+          <h2>こんな方におすすめです</h2>
+        </div>
+        <div class="check-list">
+          <p>生成AIを触ってみたいけれど、何から始めればよいかわからない方</p>
+          <p>文章作成や調べもの、資料づくりの時間を短くしたい方</p>
+          <p>仕事や地域活動、学習にAIを取り入れてみたい方</p>
+          <p>便利さだけでなく、リスクや注意点もきちんと知っておきたい方</p>
+        </div>
+      </section>
+
+      <section class="section schedule">
+        <div class="section-heading">
+          <p class="eyebrow">Flow</p>
+          <h2>当日の流れ</h2>
+        </div>
+        <ol class="timeline">
+          <li>
+            <time>導入</time>
+            <p>生成AIでできること、苦手なことを確認</p>
+          </li>
+          <li>
+            <time>体験</time>
+            <p>実際に質問を作り、回答を改善する練習</p>
+          </li>
+          <li>
+            <time>応用</time>
+            <p>自分の目的に合わせた使い方を考える</p>
+          </li>
+          <li>
+            <time>確認</time>
+            <p>安全に使うためのチェックポイントを共有</p>
+          </li>
+        </ol>
+      </section>
+
+      <section id="apply" class="section apply">
+        <div>
+          <p class="eyebrow">Apply</p>
+          <h2>参加をご希望の方へ</h2>
+          <p>
+            参加方法、会場、時間、定員、参加費などの詳細は主催者からの案内をご確認ください。
+            このページは、講習の概要を事前に知っていただくための紹介ページです。
+          </p>
+        </div>
+        <div class="apply-panel">
+          <strong>生成AI講習</strong>
+          <span>2026年6月27日</span>
+          <a class="button primary" href="mailto:?subject=生成AI講習について&body=2026年6月27日の生成AI講習について問い合わせます。">
+            問い合わせる
+          </a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <small>&copy; <span id="year"></span> <span data-i18n="brand">Private Stay</span></small>
-      <a href="https://www.airbnb.jp/rooms/1376670888016159485?check_in=2026-06-26&check_out=2026-06-28&photo_id=2332524821&source_impression_id=p3_1779180334_P3j97izze5oZvz-U&previous_page_section_name=1000" target="_blank" rel="noreferrer" data-i18n="footerBook">Book on Airbnb</a>
+      <small>&copy; 2026 生成AI講習</small>
+      <a href="#top" id="back-to-top">ページ上部へ</a>
     </footer>
 
     <script src="./script.js"></script>
